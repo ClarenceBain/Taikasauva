@@ -27,4 +27,6 @@ You will need:
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Acknowledgements
+* [Dark Byte](https://github.com/cheat-engine) for cheat engine.
+* [Nolla Games](https://nollagames.com/) for their game.
 * [Rake](https://github.com/GH-Rake) for the [detour & tramp hook.](https://guidedhacking.com/threads/simple-x86-c-trampoline-hook.14188/)

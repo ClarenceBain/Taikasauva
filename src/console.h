@@ -6,6 +6,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include "noitaLua.h"
 #include "dirent.h"
 
 
@@ -19,7 +20,7 @@ void title() // cheesy fun
     std::cout << "    |_|\\__,_|_|_|\\_\\__,_|___/\\__,_|\\__,_| \\_/ \\__,_| " << std::endl;
 }
 
-void init(LPCWSTR consoleTitle)
+void init(LPCWSTR consoleTitle) 
 {
     AllocConsole();
     SetConsoleTitle(consoleTitle);
@@ -31,7 +32,6 @@ void init(LPCWSTR consoleTitle)
 
 void displayFiles()
 {
-    //d = opendir("taikasauva\\*.tai")
     DIR* dir;
     struct dirent* directory;
     dir = opendir("taikasauva\\");
@@ -50,14 +50,15 @@ void displayFiles()
 
 void openFile(std::string path) {
     std::string line;
-    std::ifstream myfile(path);
-    if (myfile.is_open())
+    std::ifstream wand(path);
+    if (wand.is_open())
     {
-        while (std::getline(myfile, line))
+        while (std::getline(wand, line))
         {
             wandScript = line;
         }
-        myfile.close();
+        wand.close();
     }
 }
 #endif
+                                                

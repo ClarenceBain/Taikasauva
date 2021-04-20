@@ -61,6 +61,16 @@ LOOP:
             wandScript = "createGun(\"" + wand_name + "\",\"\",\"" + fast_projectile + "\",\"" + mana_charge_speed + "\",\"" + max_mana + "\",\"1\",\"" + reload_time_frames + "\",\"" + item_recoil + "\",\"0\",\"" + swim_propel + "\",\"0\",\"1\",{" + actions + "},{" + perm_actions + "},\"" + actions_per_shot + "\",\"" + shuffle_when_empty + "\",\"" + reload_time + "\",\"" + capacity + "\",\"" + fire_rate_wait + "\");\n";
             tempScript = mainScript + wandScript;
             execute();
+            std::cout << "Would you like to save this wand? (y/n) ";
+            std::cin >> yon;
+            if (yon == "y" || yon == "Y")
+            {
+                std::ofstream wand("taikasauva\\" + wand_name + ".tai");
+                wand << "createGun(\"" + wand_name + "\",\"\",\"" + fast_projectile + "\",\"" + mana_charge_speed + "\",\"" + max_mana + "\",\"1\",\"" + reload_time_frames + "\",\"" + item_recoil + "\",\"0\",\"" + swim_propel + "\",\"0\",\"1\",{" + actions + "},{" + perm_actions + "},\"" + actions_per_shot + "\",\"" + shuffle_when_empty + "\",\"" + reload_time + "\",\"" + capacity + "\",\"" + fire_rate_wait + "\");";
+                wand.close();
+                goto LOOP;
+            }
+            else if (yon == "n" || yon == "N")
             goto LOOP;
         }
     }
