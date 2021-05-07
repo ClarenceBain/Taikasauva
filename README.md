@@ -31,7 +31,8 @@ Taikasauva was made with the idea of it being for wand creation, and it was buil
 original idea.
 
 What can be done with Taikasauva extends wand creation since .tai files barebones
-essentially are .lua files. So this section will consist of "intended" and "unintentional" uses.
+essentially are .lua files.
+So this section will consist of "intended" and "unintentional" uses.
 
 ### Intended Features
 
@@ -41,8 +42,9 @@ essentially are .lua files. So this section will consist of "intended" and "unin
 
 ### Unintentional Features
 
-* Run any lua script from within a .tai file using the load Features
-  * This includes most (but not all) of the games lua api located C:\Program Files (x86)\Steam\steamapps\common\Noita\tools_modding\lua_api_documentation.txt
+* Run any lua script from within a .tai file using the load feature and the lua api
+  * Most features in the lua lua_api_documentation will work, some will not.
+  * C:\Program Files (x86)\Steam\steamapps\common\Noita\tools_modding\lua_api_documentation.txt
 
 ## License
 
