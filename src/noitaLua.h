@@ -17,7 +17,6 @@ typedef int(__cdecl* noita_gettop)(lua_State* L);
 noita_pcall pcall = (noita_pcall)n_pcall;
 noita_loadstring loadstring = (noita_loadstring)n_loadstring;
 noita_gettop gettop = (noita_gettop)n_gettop;
-noita_gettop backup = nullptr;
 lua_State* lua = nullptr;
 
 

@@ -6,6 +6,7 @@
 
 DWORD WINAPI Main(LPVOID lpParam)
 {
+    double temp = 0;
     init(L"Taikasauva - Noita's Bestfriend");
     gettop = (noita_gettop)tramp((char*)gettop, (char*)n_gettopH);
 LOOP:
@@ -26,6 +27,8 @@ LOOP:
             openFile("taikasauva\\" + file);
             tempScript = mainScript + wandScript;
             execute();
+            std::cout << " " << std::endl;
+            std::cout << "Wand loaded successfully!" << std::endl;
             goto LOOP;
         }
         else if (yon == "n" || yon == "N")
@@ -38,7 +41,7 @@ LOOP:
             std::cin >> mana_charge_speed;
             std::cout << "Max Mana: ";
             std::cin >> max_mana;
-            std::cout << "Reload Time (frames): ";
+            std::cout << "Recharge Time (frames): ";
             std::cin >> reload_time_frames;
             std::cout << "Recoil: ";
             std::cin >> item_recoil;
@@ -52,11 +55,11 @@ LOOP:
             std::cin >> actions_per_shot;
             std::cout << "Shuffle? (0/1): ";
             std::cin >> shuffle_when_empty;
-            std::cout << "Reload Time: ";
+            std::cout << "Recharge Time: ";
             std::cin >> reload_time;
             std::cout << "Wand Capacity: ";
             std::cin >> capacity;
-            std::cout << "Fire Rate Wait: ";
+            std::cout << "Cast Delay: ";
             std::cin >> fire_rate_wait;
             wandScript = "createGun(\"" + wand_name + "\",\"\",\"" + fast_projectile + "\",\"" + mana_charge_speed + "\",\"" + max_mana + "\",\"1\",\"" + reload_time_frames + "\",\"" + item_recoil + "\",\"0\",\"" + swim_propel + "\",\"0\",\"1\",{" + actions + "},{" + perm_actions + "},\"" + actions_per_shot + "\",\"" + shuffle_when_empty + "\",\"" + reload_time + "\",\"" + capacity + "\",\"" + fire_rate_wait + "\");\n";
             tempScript = mainScript + wandScript;
@@ -68,13 +71,17 @@ LOOP:
                 std::ofstream wand("taikasauva\\" + wand_name + ".tai");
                 wand << "createGun(\"" + wand_name + "\",\"\",\"" + fast_projectile + "\",\"" + mana_charge_speed + "\",\"" + max_mana + "\",\"1\",\"" + reload_time_frames + "\",\"" + item_recoil + "\",\"0\",\"" + swim_propel + "\",\"0\",\"1\",{" + actions + "},{" + perm_actions + "},\"" + actions_per_shot + "\",\"" + shuffle_when_empty + "\",\"" + reload_time + "\",\"" + capacity + "\",\"" + fire_rate_wait + "\");";
                 wand.close();
+                std::cout << " " << std::endl;
+                std::cout << "Wand saved!" << std::endl;
                 goto LOOP;
             }
             else if (yon == "n" || yon == "N")
+            std::cout << " " << std::endl;
+            std::cout << "Wand created successfully!" << std::endl;
             goto LOOP;
         }
     }
-    else 
+    else
     {
         goto LOOP;
     }
@@ -95,4 +102,3 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     }
     return TRUE;
 }
-

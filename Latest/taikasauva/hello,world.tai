@@ -1,0 +1,4 @@
+-- tai files are really just .lua files, and you createGun is a function being called.
+-- you could do a lot more than this, but you get the idea.
+
+GamePrintImportant("Hello","World!");

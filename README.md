@@ -6,6 +6,9 @@ spawning wands without enabling mods in the games settings.
 Taikasauva was built around loading the script from .tai files, but also includes a wand
 creator without the use of .tai files (albeit barebones and not flashy).
 
+![Photo](https://github.com/ClarenceBain/Taikasauva/Photos/photo1.png)
+![Photo2](https://github.com/ClarenceBain/Taikasauva/Photos/photo2.png)
+
 ### Prerequisites
 
 You will need:
@@ -22,9 +25,28 @@ You will need:
 5. Inject the .DLL into Noita
 6. Have fun!
 
+## Features
+
+Taikasauva was made with the idea of it being for wand creation, and it was built around that
+original idea.
+
+What can be done with Taikasauva extends wand creation since .tai files barebones
+essentially are .lua files. So this section will consist of "intended" and "unintentional" uses.
+
+### Intended Features
+
+* Create a wand to be spawned whenever in-game without the use of enabling mods
+* Save & Load custom wands/created wands
+* Save the wand currently in-hand to a file (todo!)
+
+### Unintentional Features
+
+* Run any lua script from within a .tai file using the load Features
+  * This includes most (but not all) of the games lua api located C:\Program Files (x86)\Steam\steamapps\common\Noita\tools_modding\lua_api_documentation.txt
+
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/ClarenceBain/Taikasauva/LICENSE) for more information.
 
 ## Acknowledgements
 * [Dark Byte](https://github.com/cheat-engine) for cheat engine.
