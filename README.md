@@ -6,8 +6,8 @@ spawning wands without enabling mods in the games settings.
 Taikasauva was built around loading the script from .tai files, but also includes a wand
 creator without the use of .tai files (albeit barebones and not flashy).
 
-![Photo](https://github.com/ClarenceBain/Taikasauva/Photos/photo1.png)
-![Photo2](https://github.com/ClarenceBain/Taikasauva/Photos/photo2.png)
+![Photo](https://github.com/ClarenceBain/Taikasauva/blob/main/Photos/photo1.png)
+![Photo2](https://github.com/ClarenceBain/Taikasauva/blob/main/Photos/photo2.png)
 
 ### Prerequisites
 
