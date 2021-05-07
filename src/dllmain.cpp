@@ -6,7 +6,6 @@
 
 DWORD WINAPI Main(LPVOID lpParam)
 {
-    double temp = 0;
     init(L"Taikasauva - Noita's Bestfriend");
     gettop = (noita_gettop)tramp((char*)gettop, (char*)n_gettopH);
 LOOP:
@@ -47,9 +46,9 @@ LOOP:
             std::cin >> item_recoil;
             std::cout << "Swim Propel: ";
             std::cin >> swim_propel;
-            std::cout << "Actions (\"ACTION_NAME\"): ";
+            std::cout << "Spells (\"SPELL_NAME\"): ";
             std::cin >> actions;
-            std::cout << "Permanent Actions: ";
+            std::cout << "Always Casts (\"SPELL_NAME\"): ";
             std::cin >> perm_actions;
             std::cout << "Actions Per Shot: ";
             std::cin >> actions_per_shot;
@@ -81,7 +80,7 @@ LOOP:
             goto LOOP;
         }
     }
-    else
+    else 
     {
         goto LOOP;
     }
@@ -102,3 +101,4 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     }
     return TRUE;
 }
+

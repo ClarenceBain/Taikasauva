@@ -14,10 +14,18 @@ creator without the use of .tai files (albeit barebones and not flashy).
 You will need:
 * Noita which can be purchased [here.](https://store.steampowered.com/app/881100/Noita/)
 * Some sort of .DLL injector, I personally just use [Cheat Engine.](https://www.cheatengine.org/)
+* You will most likely need some sort of list of the games spells.
+  * You can generate your own file by unpacking the data file with data_wak_unpack.bat
+    * Move data_wak_unpack.bat to the games main folder.
+    * C:\Program Files(x86)\Steam\steamapps\common\Noita\tools_modding\data_wak_unpack.bat
+  * Once unpacked you will be able to find the list of spells below
+    * C:\..\AppData\LocalLow\Nolla_Games_Noita\data\scripts\gun\gun_actions.lua
+  * I will supply a version however it may not always be up to date, [here.](https://github.com/ClarenceBain/Taikasauva/blob/main/gun_actions.lua)
+    * For example you will want to use the "id          = "BOMB"," part, more specifically the "BOMB".
 
 ### Installation & Usage
 
-1. Download the files [here.](https://github.com/ClarenceBain/Taikasauva/Latest)
+1. Download the files [here.](https://github.com/ClarenceBain/Taikasauva/tree/main/Latest)
 2. Move the "taikasauva" folder to Noita's directory
   * Should be somewhere along the lines of C:\Program Files (x86)\Steam\steamapps\common\Noita\
 3. Move the taikasauva.dll to a location of your liking
@@ -44,11 +52,11 @@ So this section will consist of "intended" and "unintentional" uses.
 
 * Run any lua script from within a .tai file using the load feature and the lua api
   * Most features in the lua lua_api_documentation will work, some will not.
-  * C:\Program Files (x86)\Steam\steamapps\common\Noita\tools_modding\lua_api_documentation.txt
+  * C:\Program Files(x86)\Steam\steamapps\common\Noita\tools_modding\lua_api_documentation.txt
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/ClarenceBain/Taikasauva/LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/ClarenceBain/Taikasauva/blob/main/LICENSE) for more information.
 
 ## Acknowledgements
 * [Dark Byte](https://github.com/cheat-engine) for cheat engine.
